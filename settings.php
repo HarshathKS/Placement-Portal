@@ -4,12 +4,12 @@
 session_start();
 
 //If user Not logged in then redirect them back to homepage. 
-//This is required if user tries to manually enter view-job-post.php in URL.
-if (empty($_SESSION['id_company'])) {
+if (empty($_SESSION['id_user'])) {
   header("Location: ../index.php");
   exit();
 }
 
+require_once("../db.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -44,9 +44,11 @@ if (empty($_SESSION['id_company'])) {
 
 <body class="hold-transition skin-green sidebar-mini">
   <div class="wrapper">
-    <?php
 
-    include 'header.php';
+
+
+    <?php
+    include 'header.php'
     ?>
 
     <!-- Content Wrapper. Contains page content -->
@@ -62,23 +64,20 @@ if (empty($_SESSION['id_company'])) {
                 </div>
                 <div class="box-body no-padding">
                   <ul class="nav nav-pills nav-stacked">
-                    <li><a href="index.php"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-                    <li><a href="edit-company.php"><i class="fa fa-tv"></i> Update Profile</a></li>
-                    <li><a href="create-job-post.php"><i class="fa fa-file-o"></i> Post Drive</a></li>
-                    <li><a href="my-job-post.php"><i class="fa fa-file-o"></i> Current Drives</a></li>
-                    <li><a href="job-applications.php"><i class="fa fa-file-o"></i> Drive Applications</a></li>
+                    <li><a href="edit-profile.php"><i class="fa fa-user"></i> Edit Profile</a></li>
+                    <li><a href="index.php"><i class="fa fa-address-card-o"></i> My Applications</a></li>
+                    <!-- <li><a href="../jobs.php"><i class="fa fa-list-ul"></i> Active Drives</a></li> -->
                     <li><a href="mailbox.php"><i class="fa fa-envelope"></i> Mailbox</a></li>
                     <li class="active"><a href="settings.php"><i class="fa fa-gear"></i> Settings</a></li>
-                    <li><a href="resume-database.php"><i class="fa fa-user"></i> Resume Database</a></li>
                     <li><a href="../logout.php"><i class="fa fa-arrow-circle-o-right"></i> Logout</a></li>
-                  </ul>
+                    <!-- </ul>e-o-right"></i> Logout</a></li> -->
                   </ul>
                 </div>
               </div>
             </div>
             <div class="col-md-9 bg-white padding-2">
-              <h2><i>Account Settings</i></h2>
-              <p>In this section you can change your name and account password</p>
+              <h2>Change Password</h2>
+              <p>Type in new password that you want to use</p>
               <div class="row">
                 <div class="col-md-6">
                   <form id="changePassword" action="change-password.php" method="post">
@@ -89,7 +88,7 @@ if (empty($_SESSION['id_company'])) {
                       <input id="cpassword" class="form-control input-lg" type="password" autocomplete="off" placeholder="Confirm Password" required>
                     </div>
                     <div class="form-group">
-                      <button type="submit" class="btn btn-flat btn-success btn-lg">Change Password</button>
+                      <button type="submit" class="btn btn-flat btn-success">Change Password</button>
                     </div>
                     <div id="passwordError" class="color-red text-center hide-me">
                       Password Mismatch!!
@@ -97,24 +96,9 @@ if (empty($_SESSION['id_company'])) {
                   </form>
                 </div>
                 <div class="col-md-6">
-                  <form action="update-name.php" method="post">
-                    <div class="form-group">
-                      <label>Your Name (Full Name)</label>
-                      <input class="form-control input-lg" name="name" type="text">
-                    </div>
-                    <div class="form-group">
-                      <button type="submit" class="btn btn-flat btn-primary btn-lg">Change Name</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <br>
-              <br>
-              <div class="row">
-                <div class="col-md-6">
                   <form action="deactivate-account.php" method="post">
                     <label><input type="checkbox" required> I Want To Deactivate My Account</label>
-                    <button class="btn btn-danger btn-flat btn-lg">Deactivate My Account</button>
+                    <button type="submit" class="btn btn-danger btn-flat btn-lg">Deactivate My Account</button>
                   </form>
                 </div>
               </div>
@@ -163,3 +147,26 @@ if (empty($_SESSION['id_company'])) {
 </body>
 
 </html>
+
+<style>
+  /* my css  */
+
+  .box {
+
+    font-size: medium;
+    font-family: sans-serif;
+  }
+
+
+  li {
+    color: aqua;
+  }
+
+
+  @media only screen and (max-width: 989px) {
+    .box {
+      margin: auto;
+      text-align: center;
+    }
+  }
+</style>

@@ -3,27 +3,25 @@
     <nav class="navbar">
         <a href="#" class="nav-logo">Placement Portal</a>
         <ul class="nav-menu">
-            <li class="nav-item">
-                <a href="index.php" class="nav-link">Dashboard</a>
-            </li>
-            <li class="nav-item">
-                <a href="resume.php" class="nav-link">Create Resume</a>
-            </li>
-            <li class="nav-item">
-                <a href="notice.php" class="nav-link">Notice</a>
-            </li>
-            <li class="nav-item">
-                <a href="../jobs.php" class="nav-link">Active Drives</a>
-            </li>
-            <li class="nav-item">
-                <a href="../logout.php" class="nav-link">Log Out</a>
-            </li>
-        </ul>
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.php" class="nav-link">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../jobs.php" class="nav-link">Notice</a>
+                </li>
+                <li class="nav-item">
+                    <a href="settings.php" class="nav-link">Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../logout.php" class="nav-link">Log Out</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
     </nav>
 </header>
 
@@ -49,7 +47,6 @@
 
     a {
         text-decoration: none;
-        left: 0px;
     }
 
     .header {
@@ -75,7 +72,6 @@
         -webkit-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out;
         background-color: #101010;
-
     }
 
     .nav-menu {
@@ -102,7 +98,6 @@
         font-size: 2.1rem;
         font-weight: 500;
         color: #d0cce9;
-
     }
 
     @media only screen and (max-width: 768px) {
@@ -120,7 +115,6 @@
             box-shadow:
                 0 10px 27px rgba(0, 0, 0, 0.05);
             z-index: 10;
-
         }
 
         .nav-menu.active {
@@ -165,8 +159,4 @@
         hamburger.classList.toggle("active");
         navMenu.classList.toggle("active");
     }
-</script>
-
-<script src="../js/sweetalert.js">
-
 </script>

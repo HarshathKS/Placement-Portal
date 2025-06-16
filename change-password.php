@@ -3,7 +3,7 @@
 //To Handle Session Variables on This Page
 session_start();
 
-if(empty($_SESSION['id_company'])) {
+if(empty($_SESSION['id_user'])) {
   header("Location: ../index.php");
   exit();
 }
@@ -21,7 +21,7 @@ if(isset($_POST)) {
 	$password = base64_encode(strrev(md5($password)));
 
 	//sql query to check user login
-	$sql = "UPDATE company SET password='$password' WHERE id_company='$_SESSION[id_company]'";
+	$sql = "UPDATE users SET password='$password' WHERE id_user='$_SESSION[id_user]'";
 	if($conn->query($sql) === true) {
 		header("Location: index.php");
 		exit();

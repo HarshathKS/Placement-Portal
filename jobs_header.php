@@ -4,19 +4,19 @@
         <a href="#" class="nav-logo">Placement Portal</a>
         <ul class="nav-menu">
             <li class="nav-item">
-                <a href="index.php" class="nav-link">Dashboard</a>
+                <a href="user/index.php" class="nav-link">Dashboard</a>
             </li>
             <li class="nav-item">
-                <a href="resume.php" class="nav-link">Create Resume</a>
+                <a href="user/resume.php" class="nav-link">Create Resume</a>
             </li>
             <li class="nav-item">
-                <a href="notice.php" class="nav-link">Notice</a>
+                <a href="user/notice.php" class="nav-link">Notice</a>
             </li>
             <li class="nav-item">
-                <a href="../jobs.php" class="nav-link">Active Drives</a>
+                <a href="jobs.php" class="nav-link">Active Drives</a>
             </li>
             <li class="nav-item">
-                <a href="../logout.php" class="nav-link">Log Out</a>
+                <a href="logout.php" class="nav-link">Log Out</a>
             </li>
         </ul>
         <div class="hamburger">
@@ -165,8 +165,4 @@
         hamburger.classList.toggle("active");
         navMenu.classList.toggle("active");
     }
-</script>
-
-<script src="../js/sweetalert.js">
-
 </script>

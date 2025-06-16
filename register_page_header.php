@@ -4,19 +4,16 @@
         <a href="#" class="nav-logo">Placement Portal</a>
         <ul class="nav-menu">
             <li class="nav-item">
-                <a href="index.php" class="nav-link">Dashboard</a>
+                <a href="index.php" class="nav-link">Home</a>
             </li>
+
             <li class="nav-item">
-                <a href="resume.php" class="nav-link">Create Resume</a>
+                <a href="login.php" class="nav-link">Login</a>
             </li>
+
+
             <li class="nav-item">
-                <a href="notice.php" class="nav-link">Notice</a>
-            </li>
-            <li class="nav-item">
-                <a href="../jobs.php" class="nav-link">Active Drives</a>
-            </li>
-            <li class="nav-item">
-                <a href="../logout.php" class="nav-link">Log Out</a>
+                <a href="contact.php" class="nav-link">Contact </a>
             </li>
         </ul>
         <div class="hamburger">
@@ -49,11 +46,10 @@
 
     a {
         text-decoration: none;
-        left: 0px;
     }
 
     .header {
-        border-bottom: 1px solid #E2E8F0;
+        border-bottom: 0px solid #E2E8F0;
     }
 
     .navbar {
@@ -61,6 +57,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 1rem 1.5rem;
+        background-color: #114f5e;
     }
 
     .hamburger {
@@ -102,7 +99,6 @@
         font-size: 2.1rem;
         font-weight: 500;
         color: #d0cce9;
-
     }
 
     @media only screen and (max-width: 768px) {
@@ -165,8 +161,4 @@
         hamburger.classList.toggle("active");
         navMenu.classList.toggle("active");
     }
-</script>
-
-<script src="../js/sweetalert.js">
-
 </script>

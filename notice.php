@@ -2,7 +2,7 @@
 
 session_start();
 
-if (empty($_SESSION['id_company'])) {
+if (empty($_SESSION['id_user'])) {
     header("Location: ../index.php");
     exit();
 }
@@ -80,7 +80,7 @@ require_once("../db.php");
 
                                             <?php
 
-                                            $sql = "SELECT * FROM notice ";
+                                            $sql = "SELECT * FROM notice where audience='All Students'";
 
                                             $result = $conn->query($sql);
 
